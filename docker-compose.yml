@@ -17,13 +17,13 @@ services:
     build:
       context: .
     volumes:
-      - ./:/app/
+      - ./:/api/v1
     networks:
       - deployml_network
     depends_on:
       - mymongo
     ports:
-      - 8001:8001
+      - 8000:8000
     env_file:
       - ./.env
 
